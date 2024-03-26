@@ -5,6 +5,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimalController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('animal.index');
 });
 Route::resource('animals', AnimalController::class);
