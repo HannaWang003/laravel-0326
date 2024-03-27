@@ -35,8 +35,8 @@
             </div>
         </nav>
     </div>
-    <div class="container">
-        <div class="row">
+    <div class="container mt-3">
+        <div class="row justify-content-evenly">
             @yield('card')
         </div>
     </div>
