@@ -4,6 +4,8 @@
     <div class="container mt-3">
         <h2>Hover Rows</h2>
         <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>
+        <div class="text-end"><button class="btn btn-primary" onclick="location.href='{{ route('cats.create') }}'">Add</button>
+        </div>
         <table class="table table-hover">
             <thead>
                 <tr>
