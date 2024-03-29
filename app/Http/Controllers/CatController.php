@@ -32,8 +32,9 @@ class CatController extends Controller
     public function store(Request $request)
     {
         $request = $request->except('_token');
-        DB::table('cats')->insert($request);
-        return redirect(route('cats.index'));
+        Cat::create($request);
+        // DB::table('cats')->insert($request);
+        return redirect()->route('cats.index');
     }
 
     /**
@@ -65,8 +66,8 @@ class CatController extends Controller
      */
     public function destroy(Cat $cat)
     {
-        dd("$cat del ok");
-        // $cat->delete();
-        // return redirect()->route('cats.index');
+        // dd("$cat del ok");
+        $cat->delete();
+        return redirect()->route('cats.index');
     }
 }
