@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Animal - page')
-@section('content_detail')
+@section('content-title', 'Animals')
+@section('content')
     <div class="d-flex justify-content-around">
         @for ($i = 1; $i <= 3; $i++)
             @php

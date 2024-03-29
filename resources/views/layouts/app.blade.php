@@ -38,12 +38,8 @@
             </nav>
         </div>
         <div class="container mt-3">
-            <div class="row justify-content-evenly">
-                @yield('card')
-            </div>
-        </div>
-        <div class="container">
-            @yield('content_detail')
+            <h1>@yield('content-title')</h1>
+            @yield('content')
         </div>
     </div>
     <div class="container sticky-bottom">
