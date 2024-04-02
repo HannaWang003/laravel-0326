@@ -32,6 +32,7 @@ class CatController extends Controller
     public function store(Request $request)
     {
         $request = $request->except('_token');
+        // dd($request);
         Cat::create($request);
         // DB::table('cats')->insert($request);
         return redirect()->route('cats.index');
@@ -50,7 +51,9 @@ class CatController extends Controller
      */
     public function edit(Cat $cat)
     {
-        dd("$cat->id edit ok");
+        $id = $cat->id;
+        $data = DB::table('cats')->where('id', $id)->first();
+        return view('cat.edit', ['data' => $data]);
     }
 
     /**
@@ -58,7 +61,9 @@ class CatController extends Controller
      */
     public function update(Request $request, Cat $cat)
     {
-        //
+        $data = $request->except('_token', '_method');
+        $cat->update($data);
+        return redirect(route('cats.index'));
     }
 
     /**
