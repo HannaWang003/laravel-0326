@@ -30,7 +30,7 @@
                                 <a class="nav-link" href="{{ route('cats.index') }}">cat</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">dog</a>
+                                <a class="nav-link" href="{{ route('dogs.index') }}">dog</a>
                             </li>
                         </ul>
                     </div>
